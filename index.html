@@ -454,6 +454,50 @@ button,a{touch-action:manipulation}
 .float:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 15px 32px rgba(0,0,0,.22)}
 .float:active{transform:scale(.96)}
 
+
+/* =========================
+   IMAGE RESPONSIVENESS FIX
+   Hero/God image intentionally unchanged.
+   ========================= */
+img:not(.heroimg) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keep image containers from forcing crops on smaller screens. */
+.service img:not(.heroimg),
+.aboutphoto:not(.heroimg),
+.kalash:not(.heroimg),
+.awardimg:not(.heroimg) {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 850px) {
+  .service img:not(.heroimg),
+  .aboutphoto:not(.heroimg),
+  .kalash:not(.heroimg),
+  .awardimg:not(.heroimg) {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 600px) {
+  .service img:not(.heroimg),
+  .aboutphoto:not(.heroimg),
+  .kalash:not(.heroimg),
+  .awardimg:not(.heroimg) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+}
+
 </style>
 </head>
 <body>
