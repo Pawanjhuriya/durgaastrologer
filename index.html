@@ -498,6 +498,29 @@ img:not(.heroimg) {
   }
 }
 
+
+/* Supplied zodiac wheel: used for every non-hero image and continuously spins. */
+.zodiac-spin {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  transform-origin: center center;
+  animation: zodiacSpin 18s linear infinite;
+  will-change: transform;
+}
+@keyframes zodiacSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (max-width: 600px) {
+  .zodiac-spin { width: 100%; height: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .zodiac-spin { animation: none !important; }
+}
 </style>
 </head>
 <body>
@@ -563,15 +586,15 @@ img:not(.heroimg) {
 <div class="trust" id="why"><div class="wrap trustbox"><div class="trustitem"><div class="icon">✓</div><div><b>100% Privacy</b><span>Your privacy is our priority</span></div></div><div class="trustitem"><div class="icon">♟</div><div><b>Expert Astrologers</b><span>Experienced &amp; verified experts</span></div></div><div class="trustitem"><div class="icon">✦</div><div><b>Accurate Guidance</b><span>Personalized Vedic insight</span></div></div><div class="trustitem"><div class="icon">◷</div><div><b>24×7 Support</b><span>We are always here</span></div></div></div></div>
 
 <section class="section cream" id="services"><div class="wrap"><div class="head"><div class="kicker">✦ Our Specialized Astrology Services ✦</div><h2>How We Can <em>Help You</em></h2><p>Get focused guidance for the questions that matter most.</p></div><div class="services">
-<div class="service"><img src="saying-I-love-you-changes.jpg" alt="Love problem"><div class="servicebody"><h3>Love Problem Solution</h3><p>Resolve love issues and bring more harmony to your relationship.</p><div class="more">Learn More →</div></div></div>
+<div class="service"><img src="saving-I-love-you-changes.jpg" alt="Love problem"><div class="servicebody"><h3>Love Problem Solution</h3><p>Resolve love issues and bring more harmony to your relationship.</p><div class="more">Learn More →</div></div></div>
 <div class="service"><img src="GettyImages-1368382409-min.jpg" alt="Marriage consultation"><div class="servicebody"><h3>Marriage Problem Solution</h3><p>Guidance for marriage delays, compatibility and family concerns.</p><div class="more">Learn More →</div></div></div>
 <div class="service"><img src="annoyed-spouse-scaled.jpg" alt="Husband wife consultation"><div class="servicebody"><h3>Husband Wife Disputes</h3><p>Discuss relationship tension and seek a calmer perspective.</p><div class="more">Learn More →</div></div></div>
-<div class="service"><img src="free-astrologer-consultancy-services.jpg" alt="Career consultation"><div class="servicebody"><h3>Career &amp; Business Solution</h3><p>Perspective for career growth, work decisions and business questions.</p><div class="more">Learn More →</div></div></div>
+<div class="service"><img src="free-astrologer-consultancy-services.jpg" alt="Career consultation" class="zodiac-spin"><div class="servicebody"><h3>Career &amp; Business Solution</h3><p>Perspective for career growth, work decisions and business questions.</p><div class="more">Learn More →</div></div></div>
 <div class="service"><img src="financial-planning-text-yellow-notepad-with-financial-data-analysis-background-financial-planning-concept-1-scaled.jpg" alt="Financial consultation"><div class="servicebody"><h3>Financial Problem Solution</h3><p>Discuss financial uncertainty and timing-related questions.</p><div class="more">Learn More →</div></div></div>
 <div class="service"><img src="Astrology-and-Vastu-Guiding-Principles-for-Harmonious-Living.jpg" alt="Vastu consultation"><div class="servicebody"><h3>Vastu &amp; Astrology</h3><p>Guidance around home harmony, Vastu and positive living.</p><div class="more">Learn More →</div></div></div>
 </div><div class="banner"><div><h3>Talk to Our Astrologer &amp; Get Instant Solutions</h3><p>Your problem may have a solution that you don't know about.</p></div><a class="btn orange" href="tel:+919875715735">☎ Call Now · +91 98757 15735</a></div></div></section>
 
-<section class="section" id="about"><div class="wrap about"><img class="aboutphoto" src="6790d0e21b59c86948ea995a_1518963544_Connect-With-Astrologer-Indian-Astrology-Predictions.jpg" alt="Astrology consultation"><div class="aboutcopy"><div class="kicker">✦ About DurgaAstrologer ✦</div><h2>Guiding You Towards <em>A Better Tomorrow</em></h2><p>DurgaAstrologer is a trusted Vedic astrology consultation brand focused on personalized guidance and thoughtful conversations.</p><div class="checks"><span>Personalized guidance &amp; remedies</span><span>Private and respectful consultation</span><span>Clear, easy-to-understand solutions</span><span>Guidance for important life questions</span></div></div><img class="kalash" src="free-astrologer-consultancy-services.jpg" alt="Divine guidance"></div></section>
+<section class="section" id="about"><div class="wrap about"><img class="aboutphoto" src="6790d0e21b59c86948ea995a_1518963544_Connect-With-Astrologer-Indian-Astrology-Predictions.jpg" alt="Astrology consultation"><div class="aboutcopy"><div class="kicker">✦ About DurgaAstrologer ✦</div><h2>Guiding You Towards <em>A Better Tomorrow</em></h2><p>DurgaAstrologer is a trusted Vedic astrology consultation brand focused on personalized guidance and thoughtful conversations.</p><div class="checks"><span>Personalized guidance &amp; remedies</span><span>Private and respectful consultation</span><span>Clear, easy-to-understand solutions</span><span>Guidance for important life questions</span></div></div><img class="kalash zodiac-spin" src="free-astrologer-consultancy-services.jpg" alt="Divine guidance"></div></section>
 
 <section class="stats"><div class="wrap statsbox"><div class="stat"><strong>20K+</strong><span>Happy Clients</span></div><div class="stat"><strong>20+</strong><span>Years Experience</span></div><div class="stat"><strong>98%</strong><span>Client Satisfaction</span></div><div class="stat"><strong>24×7</strong><span>Support Available</span></div></div></section>
 
